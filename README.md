@@ -1,7 +1,9 @@
-# Fresh project
+# I Hearby Declare
 
-Your new Fresh project is ready to go. You can follow the Fresh "Getting
-Started" guide here: https://fresh.deno.dev/docs/getting-started
+A fun web app that lets you write message that are locked but hidden until a
+particular time.
+
+Check it out at https://ihearbydeclare.com.
 
 ### Usage
 
@@ -14,3 +16,8 @@ deno task start
 ```
 
 This will watch the project directory and restart as necessary.
+
+### Development
+
+This repo includes a CLAUDE.md file to make development with Claude Code very
+straightforward.
