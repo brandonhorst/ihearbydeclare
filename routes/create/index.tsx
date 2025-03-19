@@ -2,6 +2,7 @@ import { Handlers } from "$fresh/server.ts";
 import { getDb } from "../../server.ts";
 import { Declaration } from "../../types.ts";
 import DeclarationForm from "../../islands/DeclarationForm.tsx";
+import { Footer } from "../../components/Footer.tsx";
 
 export const handler: Handlers = {
   async POST(req) {
@@ -56,12 +57,15 @@ export const handler: Handlers = {
 
 export default function Create() {
   return (
-    <div class="min-h-screen flex flex-col items-center justify-center p-0 bg-gradient-to-b from-emerald-100 to-emerald-200">
+    <div class="min-h-screen flex flex-col items-center justify-center py-4 bg-gradient-to-b from-emerald-100 to-emerald-200">
       <div class="sm:max-w-md w-full bg-white/80 sm:rounded-lg rounded-none sm:shadow-lg p-8">
         <h1 class="text-4xl font-bold text-emerald-700 mb-6 text-center">
           I Hearby Declare&hellip;
         </h1>
         <DeclarationForm />
+        <div class="mt-8">
+          <Footer />
+        </div>
       </div>
     </div>
   );

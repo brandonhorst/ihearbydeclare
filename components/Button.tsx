@@ -1,12 +1,26 @@
 import { JSX } from "preact";
 import { IS_BROWSER } from "$fresh/runtime.ts";
 
-export function Button(props: JSX.HTMLAttributes<HTMLButtonElement>) {
+type ButtonProps = JSX.HTMLAttributes<HTMLButtonElement>;
+
+type LinkButtonProps = JSX.HTMLAttributes<HTMLAnchorElement>;
+
+export function Button({ ...props }: ButtonProps) {
+  const baseClasses =
+    "px-4 py-2 rounded-lg font-medium transition-colors bg-emerald-600 text-white hover:bg-emerald-700";
+
   return (
     <button
       {...props}
       disabled={!IS_BROWSER || props.disabled}
-      class="px-2 py-1 border-gray-500 border-2 rounded bg-white hover:bg-gray-200 transition-colors"
+      class={`${baseClasses} ${props.class || ""}`}
     />
   );
+}
+
+export function LinkButton({ ...props }: LinkButtonProps) {
+  const baseClasses =
+    "px-4 py-2 rounded-lg font-medium transition-colors inline-block bg-emerald-600 text-white hover:bg-emerald-700";
+
+  return <a {...props} class={`${baseClasses} ${props.class || ""}`} />;
 }

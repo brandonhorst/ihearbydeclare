@@ -11,7 +11,6 @@ built with Preact. It uses Tailwind v3 for styling.
 
 ## Commands
 
-- Build/start: `deno task start` (watches for changes)
 - Lint/Typecheck: `deno lint`
 - Test: `deno test`
 - Format: `deno fmt`
@@ -37,3 +36,4 @@ built with Preact. It uses Tailwind v3 for styling.
 - There are 3 main pages, the "landing page" or "main page" lives at
   `routes/index.tsx`, the "create page" lives at `routes/create/index.tsx`, and
   the "view page" lives at `routes/view/[declarationId]/index.tsx`.
+- There is also a privacy policy at `routes/privacy/index.tsx`.

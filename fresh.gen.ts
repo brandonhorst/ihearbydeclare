@@ -6,6 +6,7 @@ import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $create_index from "./routes/create/index.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $privacy_index from "./routes/privacy/index.tsx";
 import * as $view_declarationId_index from "./routes/view/[declarationId]/index.tsx";
 import * as $CountdownTimer from "./islands/CountdownTimer.tsx";
 import * as $DeclarationForm from "./islands/DeclarationForm.tsx";
@@ -17,6 +18,7 @@ const manifest = {
     "./routes/_app.tsx": $_app,
     "./routes/create/index.tsx": $create_index,
     "./routes/index.tsx": $index,
+    "./routes/privacy/index.tsx": $privacy_index,
     "./routes/view/[declarationId]/index.tsx": $view_declarationId_index,
   },
   islands: {

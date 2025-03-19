@@ -2,6 +2,8 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import { getDb } from "../../../server.ts";
 import { ViewDeclaration } from "../../../types.ts";
 import CountdownTimer from "../../../islands/CountdownTimer.tsx";
+import { Footer } from "../../../components/Footer.tsx";
+import { LinkButton } from "../../../components/Button.tsx";
 
 export const handler: Handlers = {
   async GET(_req, ctx) {
@@ -25,7 +27,7 @@ export default function View(props: PageProps<ViewDeclaration>) {
   const publicationDateStr = new Date(data.publicationDate).toLocaleString();
 
   return (
-    <div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-emerald-100 to-emerald-200">
+    <div class="min-h-screen flex flex-col items-center justify-center py-4 bg-gradient-to-b from-emerald-100 to-emerald-200">
       <div class="sm:max-w-md w-full bg-white/80 sm:rounded-lg sm:shadow-lg p-8">
         {data.isPublished
           ? (
@@ -66,6 +68,12 @@ export default function View(props: PageProps<ViewDeclaration>) {
               <CountdownTimer publicationDate={data.publicationDate} />
             </>
           )}
+        <div class="mt-8 text-center">
+          <LinkButton href="/">Go Home</LinkButton>
+        </div>
+        <div class="mt-8">
+          <Footer />
+        </div>
       </div>
     </div>
   );

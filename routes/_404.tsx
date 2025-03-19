@@ -1,4 +1,5 @@
 import { Head } from "$fresh/runtime.ts";
+import { Footer } from "../components/Footer.tsx";
 
 export default function Error404() {
   return (
@@ -16,10 +17,11 @@ export default function Error404() {
           </p>
           <a
             href="/"
-            class="inline-block px-6 py-3 bg-emerald-600 text-white font-medium text-lg rounded-lg shadow hover:bg-emerald-700 hover:shadow-lg transition-colors"
+            class="inline-block px-6 py-3 bg-emerald-600 text-white font-medium text-lg rounded-lg shadow hover:bg-emerald-700 hover:shadow-lg transition-colors mb-8"
           >
             Go back home
           </a>
+          <Footer />
         </div>
       </div>
     </>
