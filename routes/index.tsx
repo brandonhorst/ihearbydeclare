@@ -13,8 +13,8 @@ export default function Home() {
           choose.
         </p>
         <p class="text-gray-600 mb-8">
-          Proove that you knew something before it happened, without revealing
-          it beforehand.
+          Prove that you knew something before it happened, without revealing it
+          beforehand.
         </p>
         <LinkButton href="/create" class="mb-8">
           Declare Something
